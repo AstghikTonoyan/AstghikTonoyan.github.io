@@ -1,0 +1,52 @@
+#game_over, #game_win{
+    position: absolute;
+    height: var(--widthMain);
+    width: var(--widthMain);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    flex-direction: column;
+    background-color: var(--bgColorGameOver)
+}
+#game_win{
+    background-color: var(--bgColorGameWin);
+}
+#game_over > p, #game_win > p{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--colorValue2or4orTitle);
+}
+#game_win > p{
+    color: var(--colorValueOthers);
+}
+#game_over > div, #game_win_buttons > div{
+    margin-top: 30px;
+    background-color: var(--bgColorButton);
+    color: var(--colorValueOthers);
+    font-size: var(--textSizeGameInfo);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#game_win_buttons > div{
+    margin: 30px 15px 0 15px;
+}
+#game_win_buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width:500px){
+    #game_over > p, #game_win > p{
+        font-size: 21.6px;
+    }
+    #game_over > div, #game_win_buttons > div{
+        margin-top: 18px;
+        padding: 6px 12px;
+    }
+    #game_win_buttons > div{
+        margin: 18px 9px 0 9px;
+    }
+}

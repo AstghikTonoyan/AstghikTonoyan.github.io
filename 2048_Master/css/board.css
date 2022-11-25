@@ -1,0 +1,177 @@
+#board, #boardLive{
+    width: var(--widthMain);
+    height: var(--widthMain);
+    background-color: var(--bgColorBoard);
+    position: absolute;
+    border-radius: 6px;
+    z-index: 0;
+}
+#boardLive{
+    background-color: transparent;
+    z-index: 1;
+}
+.tile{
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    border-radius: 3px;
+    background-color: var(--bgColorNull);
+}
+.tile0, .tileLive00, .tileLive_00{
+    top: 16px;
+    left: 16px;
+}
+.tile1, .tileLive01, .tileLive_01{
+    top: 16px;
+    left: 137px;
+}
+.tile2, .tileLive02, .tileLive_02{
+    top: 16px;
+    left: 258px;
+}
+.tile3, .tileLive03, .tileLive_03{
+    top: 16px;
+    left: 379px;
+}
+.tile4, .tileLive10, .tileLive_10{
+    top: 137px;
+    left: 16px;
+}
+.tile5, .tileLive11, .tileLive_11{
+    top: 137px;
+    left: 137px;
+}
+.tile6, .tileLive12, .tileLive_12{
+    top: 137px;
+    left: 258px;
+}
+.tile7, .tileLive13, .tileLive_13{
+    top: 137px;
+    left: 379px;
+}
+.tile8, .tileLive20, .tileLive_20{
+    top: 258px;
+    left: 16px;
+}
+.tile9, .tileLive21, .tileLive_21{
+    top: 258px;
+    left: 137px;
+}
+.tile10, .tileLive22, .tileLive_22{
+    top: 258px;
+    left: 258px;
+}
+.tile11, .tileLive23, .tileLive_23{
+    top: 258px;
+    left: 379px;
+}
+.tile12, .tileLive30, .tileLive_30{
+    top: 379px;
+    left: 16px;
+}
+.tile13, .tileLive31, .tileLive_31{
+    top: 379px;
+    left: 137px;
+}
+.tile14, .tileLive32, .tileLive_32{
+    top: 379px;
+    left: 258px;
+}
+.tile15, .tileLive33, .tileLive_33{
+    top: 379px;
+    left: 379px;
+}
+.tileLive{
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    animation-name: tile_scale;
+    animation-duration: 200ms;
+    transition: 100ms;    
+}
+
+@keyframes tile_scale{
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@media only screen and (max-width:500px){
+    .tile{
+        width: 63px;
+        height: 63px;
+        border-radius: 3px;
+    }
+    .tile0, .tileLive00, .tileLive_00{
+        top: 9.6px;
+        left: 9.6px;
+    }
+    .tile1, .tileLive01, .tileLive_01{
+        top: 9.6px;
+        left: 82.2px;
+    }
+    .tile2, .tileLive02, .tileLive_02{
+        top: 9.6px;
+        left: 154.8px;
+    }
+    .tile3, .tileLive03, .tileLive_03{
+        top: 9.6px;
+        left: 227.4px;
+    }
+    .tile4, .tileLive10, .tileLive_10{
+        top: 82.2px;
+        left: 9.6px;
+    }
+    .tile5, .tileLive11, .tileLive_11{
+        top: 82.2px;
+        left: 82.2px;
+    }
+    .tile6, .tileLive12, .tileLive_12{
+        top: 82.2px;
+        left: 154.8px;
+    }
+    .tile7, .tileLive13, .tileLive_13{
+        top: 82.2px;
+        left: 227.4px;
+    }
+    .tile8, .tileLive20, .tileLive_20{
+        top: 154.8px;
+        left: 9.6px;
+    }
+    .tile9, .tileLive21, .tileLive_21{
+        top: 154.8px;
+        left: 82.2px;
+    }
+    .tile10, .tileLive22, .tileLive_22{
+        top: 154.8px;
+        left: 154.8px;
+    }
+    .tile11, .tileLive23, .tileLive_23{
+        top: 154.8px;
+        left: 227.4px;
+    }
+    .tile12, .tileLive30, .tileLive_30{
+        top: 227.4px;
+        left: 9.6px;
+    }
+    .tile13, .tileLive31, .tileLive_31{
+        top: 227.4px;
+        left: 82.2px;
+    }
+    .tile14, .tileLive32, .tileLive_32{
+        top: 227.4px;
+        left: 154.8px;
+    }
+    .tile15, .tileLive33, .tileLive_33{
+        top: 227.4px;
+        left: 227.4px;
+    }
+    .tileLive{
+        width: 63px;
+        height: 63px;
+    }
+}

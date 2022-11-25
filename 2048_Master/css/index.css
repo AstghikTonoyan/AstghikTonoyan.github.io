@@ -1,0 +1,93 @@
+@import './heading.css';
+@import './board.css';
+@import './gameMessage.css';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: var(--bgColorMain);
+}
+:root{
+    --widthMain: 500px;
+    --textSizeSinglOrTwoeDigit: 55px;
+    --textSizeThreeDigit: 45px;
+    --textSizeFourDigit: 35px;
+    --textSizeFiveDigit: 25px;
+    --textSizeGameInfo: 18px;
+    --bgColorMain: #faf8ef;
+    --bgColorGameOver:#eee4daba;
+    --bgColorGameWin:#edc22e80;
+    --colorValueScore: #ffffff;
+    --colorValue2or4orTitle: #776e65;
+    --colorValueOthers: #f9f6f2;
+    --bgColorButton:#8f7a66;
+    --bgColorBoard:#bbada0;
+    --bgColorNull: #eee4da59;
+    --bgColor2: #eee4da;
+    --bgColor4: #ede0c8;
+    --bgColor8: #f2b179;
+    --bgColor16: #f59563;
+    --bgColor32: #f67c5f;
+    --bgColor64: #f65e3b;
+    --bgColor128: #edcf72;
+    --bgColor256: #edcc61;
+    --bgColor512: #edc850;
+    --bgColor1024: #edc53f;
+    --bgColor2048: #edc22e;
+    --bgColorOther: #3c3a32;
+}
+#container{
+    width: var(--widthMain);
+    margin: 40px auto;
+}
+#game_container{
+    width: var(--widthMain);
+    height: var(--widthMain);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#game_intro, #game_intro > strong{
+    color: var(--colorValue2or4orTitle);
+    font-size: var(--textSizeGameInfo);
+}
+#game_explanation, #game_explanation > strong{
+    color: var(--colorValue2or4orTitle);
+    font-size: var(--textSizeGameInfo);
+}
+#game_explanation{
+    position: relative;
+}
+#game_explanation::after{
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    content: '';
+    color: var(--colorValue2or4orTitle);
+    width: 100%;
+    border-top: 1px solid var(--colorValue2or4orTitle);
+}
+
+@media only screen and (max-width:500px){
+    :root{
+        --widthMain: 300px;
+        --textSizeSinglOrTwoeDigit: 33px;
+        --textSizeThreeDigit: 27px;
+        --textSizeFourDigit: 21px;
+        --textSizeFiveDigit: 15px;
+        --textSizeGameInfo: 10.8px;
+    }
+    #container{
+        margin: 24px auto;
+    }
+    #game_container{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    #game_explanation::after{
+        top: calc(100% + 12px);
+    }
+}

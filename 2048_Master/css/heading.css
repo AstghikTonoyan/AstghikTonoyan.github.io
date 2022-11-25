@@ -1,0 +1,54 @@
+#new-game{
+    background-color: var(--bgColorButton);
+    color: var(--colorValueOthers);
+    font-size: var(--textSizeGameInfo);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#heading, #above-game{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#title{
+    font-size: 80px;
+    color: var(--colorValue2or4orTitle);
+}
+#score{
+    display: flex;
+    flex-direction: row;
+}
+#current-score, #best-score{
+    background-color: var(--bgColorBoard);
+    color: var(--bgColor2);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px 5px 15px;
+    border-radius: 3px;
+    margin: 5px;
+}
+#current-score-value, #best-score-value{
+    color: var(--colorValueScore);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media only screen and (max-width:500px){
+    #new-game{
+        padding: 6px 12px;
+    }
+    #title{
+        font-size: 48px;
+    }
+    #current-score, #best-score{
+        font-size: 7.8px;
+        padding: 6px 9px 5px 9px;
+    }
+    #current-score-value, #best-score-value{
+        font-size: 15px;
+    }
+}

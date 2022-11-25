@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="coder" content="AstghikTonoyan">
+    <title>2048</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body >
+    <div id="container">
+        <div id="heading">
+            <h1 id="title">2048</h1>
+            <div id="score">
+                <div id="current-score">
+                    SCORE
+                    <div id="current-score-value">0</div>
+                </div>
+                <div id="best-score">
+                    BEST
+                    <div id="best-score-value">0</div>
+                </div>
+            </div>
+        </div>
+        <div id="above-game">
+            <p id="game_intro">Join the tiles, get to <strong>2048!</strong></p>
+            <div id="new-game" >New Game</div>
+        </div>
+        <div id="game_container" >
+            <div id="board">
+                <div class="tile tile0"></div>
+                <div class="tile tile1"></div>
+                <div class="tile tile2"></div>
+                <div class="tile tile3"></div>
+                <div class="tile tile4"></div>
+                <div class="tile tile5"></div>
+                <div class="tile tile6"></div>
+                <div class="tile tile7"></div>
+                <div class="tile tile8"></div>
+                <div class="tile tile9"></div>
+                <div class="tile tile10"></div>
+                <div class="tile tile11"></div>
+                <div class="tile tile12"></div>
+                <div class="tile tile13"></div>
+                <div class="tile tile14"></div>
+                <div class="tile tile15"></div>
+            </div>
+            <div id="boardLive">
+            </div>
+            <div id="game_over" style="display: none;">
+                <p>Game over!</p>
+                <div>Try again</div>
+            </div>
+            <div id="game_win" style="display: none;">
+                <p>You win!</p>
+                <div id="game_win_buttons">
+                    <div>Keep going</div>
+                    <div>Try again</div>
+                </div>
+            </div>
+        </div>
+        <p id="game_explanation">
+            <strong>How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+        </p>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
